@@ -20,9 +20,9 @@ console.log(massdigit);
 //3 Решение через массивы + Объекты(Иммитация баззы данных)
 
 var Basket = [];
-var shirt = {name:'shirt', price:1000 };  // Иммитация баззы данных
-var shoes = {name:'shoes', price:2000 };
-var jeans = {name:'jeans', price:3000 };
+shirt = {name:'shirt', price:1000 };  // Иммитация баззы данных
+shoes = {name:'shoes', price:2000 };
+jeans = {name:'jeans', price:3000 };
 
 Basket.push (shirt,shoes,jeans); // Организовал массив для хранения товаров в корзине
 
@@ -37,23 +37,23 @@ function countBasketPrice(countshirt,countshoes,countjeans){
         
         var clothes = Basket[i]
          
-        for (var j in clothes){
+        
             
-                if (clothes[j] == 'shirt'){
+                if (clothes == shirt){
                 var shirtcost = clothes.price * countshirt;
                 console.log("цена всех рубашек" + shirtcost);
                 }
-                if (clothes[j] == 'shoes'){
+                if (clothes == shoes){
                     var shoescost = clothes.price * countshoes;
                     console.log("цена всей обуви" + shoescost);
                 }
-                if (clothes[j] == 'jeans'){
+                if (clothes == jeans){
                     var jeanscost = clothes.price * countjeans;
                     console.log("цена всех джинс" + jeanscost);
                 }
             
             
-        }    
+            
     }
     return shirtcost+shoescost+jeanscost
     }
